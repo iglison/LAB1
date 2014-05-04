@@ -1,5 +1,5 @@
-/* */
-//	pow(x,1.0/3.0); //calculo de raiz cúbica
+/* Calculos de Médias matemáticass */
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -38,10 +38,10 @@ int main(){
 			ari(x,y,z);
 			break;
 		case 0:
-			printf("\nBye!\n\n");
+			printf("\nAte o proximo calculo!\n\n");
 			break;
 		default :
-			printf("Digite uma op%c%co v%clida \n",-121,-58,-96);
+			printf("Digitou uma op%c%co inv%clida \n",-121,-58,-96);
 	}
 	
 	return(0);
