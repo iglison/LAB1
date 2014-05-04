@@ -6,6 +6,8 @@
 
 void geo();
 void pon();
+void har();
+void ari();
 
 int main(){
 	int x, y, z,
@@ -16,7 +18,7 @@ int main(){
 	printf("\n\tCALCULOS DE MEDIAS\n\n");
 	printf("1. GEOMETRICA\n");
 	printf("2. PONDERADA\n");
-	printf("3. HAMONICA\n");
+	printf("3. HARMONICA\n");
 	printf("4. ARITMETICA\n");
 	printf("0. Sair\n");
 	printf("\n::> ");
@@ -29,6 +31,12 @@ int main(){
 		case 2:
 			pon(x,y,z);
 			break;
+		case 3:
+			har(x,y,z);
+			break;
+		case 4:
+			ari(x,y,z);
+			break;
 		case 0:
 			printf("\nBye!\n\n");
 			break;
@@ -40,12 +48,25 @@ int main(){
 }
 
 void geo(int x, int y, int z){
-	
-	x = x*y*z;
-	printf("%.1f \n\n",pow((float)x,1.0/3.0));
+	int k;
+	k = x*y*z;
+	printf("%.2f \n\n",pow((float)k,1.0/3.0));
 }
 void pon(int x, int y, int z){
 	int k;
 	k = (x+2*y+3*z)/6;
-	printf("%.1f \n\n",(float)k);
+	printf("%.2f \n\n",(float)k);
+}
+void har(int x, int y, int z){
+	int k;
+	x = 1/x;
+	y = 1/y;
+	z = 1/z;
+	k = 1/(x+y*z);
+	printf("%.2f \n\n",(float)k);
+}
+void ari(int x, int y, int z){
+	int k;
+	k = x+y+x;
+	printf("%.2f \n\n",(float)k/3);
 }
